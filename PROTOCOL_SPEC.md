@@ -1,13 +1,8 @@
 # Residue Token Market (RTM) Protocol Spec v1.0.0-alpha
 
-This document defines the technical handshake for identifying and claiming unused token quota.
-
 ## 1. Handshake Schema
-All agents participating in the discovery layer MUST communicate using the following JSON structure.
 
 ### CAPACITY_BROADCAST (Seller Intent)
-Sent when a node identifies surplus compute residue.
-```json
 {
   "node_id": "0x...",
   "action": "CAPACITY_BROADCAST",
@@ -18,4 +13,15 @@ Sent when a node identifies surplus compute residue.
     "min_bid_usd": 0.15
   },
   "signature": "sha256_..."
+}
+
+### BID_INTENT (Buyer Intent)
+{
+  "node_id": "0x...",
+  "action": "BID_INTENT",
+  "payload": {
+    "target_node": "0x...",
+    "bid_amount_usd": 0.20,
+    "execution_window_ms": 500
+  }
 }
