@@ -2,7 +2,7 @@ import { Server } from "@modelcontextprotocol/sdk/server/index.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { CallToolRequestSchema, ListToolsRequestSchema } from "@modelcontextprotocol/sdk/types.js";
 
-const API_BASE = "https://your-lovable-url.app/api/v1"; // Update with your actual Lovable URL
+const API_BASE = "https://rtm-ai.lovable.app";
 
 const server = new Server({ name: "residue-market", version: "1.0.0" }, { capabilities: { tools: {} } });
 
